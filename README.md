@@ -1,0 +1,2 @@
+# product-catalog
+a Django application for the following problem statement. 1. Product listing page​ which lists all the products available in the database. List their name and quantity. 2. Product detail page​ where details of a product is displayed. Details are:- ​Name, Quantity, Image of the product. 3. Registration Page​,  User should register before accessing detail page or listing page. User Registration details: - email, phone number, username, full name &amp; password ​ . 4. Login​ functionality with ​session management ​ .   
