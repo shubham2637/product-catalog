@@ -70,7 +70,7 @@ TEMPLATES = [
         },
     },
 ]
-
+#AUTH_USER_MODEL = 'project.User'
 WSGI_APPLICATION = 'djangoProject.wsgi.application'
 
 
