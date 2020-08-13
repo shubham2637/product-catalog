@@ -1,16 +1,43 @@
 {% extends 'base.html' %}}
-{% block content %}}
-{% block title %}Welcome{% endblock %}
-{% load static %}
-<h1>Welcome to the Product Catalog!</h1>
-<p>
-    This is the demo application for the internship selection process by <br>Shubham Singh
-    <em>Django: Getting Started</em>
-    on <a href="https://github.com/shubham2637/product-catalog">
-    Github</a>.
-</p>
-<img alt="Winter is here" src="{% static 'website/got.jpg' %}" width="300px">
-<h2>
 
-</h2>
+{% block title %} Welcome {% endblock %}
+{% load static %}
+{% block content %}
+
+<div class="cover-container d-flex   p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">DealBoxer</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="{% url 'index' %}">Home</a>
+          <a class="nav-link" href="{% url 'productlisting' %}">Products Listing</a>
+          {% if user.is_authenticated %} 
+          <a class="nav-link " href="{% url 'logout' %}">Logout</a>
+          {% else %}
+          <a class="nav-link active" href="{% url 'login' %}">Login</a>
+          {% endif %}
+        </nav>
+      </div>
+    </header>
+  
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Welcome to DealBoxer</h1>
+      <p class="lead">DealBoxer a Product Browser biuld using Django and Boostrap 4.3. </p>
+      <p class="lead">
+        <a href="{% url 'login' %}" class="btn btn-lg btn-secondary">Login </a>
+      </p>
+    </main>
+  
+    <footer class="mastfoot mt-auto row">
+      <div class="inner ">
+        <p>Made by <a href="https://www.linkedin.com/in/shubham2637">Shubham Singh</a> .</p>
+      </div>
+      <div class="inner row mr-auto"></div>
+        <a style="padding: 1%;"  href="https://www.linkedin.com/in/shubham2637"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a style="padding: 1%;" href="https://instagram.com/shubham2637" style="color: #fb3958;"><i class="fab fa-instagram-square fa-2x"></i></a>
+        <a style="padding: 1%;" href="https://www.facebook.com/shubham2637" style="color: #00acee;"> <i class="fab fa-facebook fa-2x"></i></a>
+      </div>
+      
+    </footer>
+  </div>
 {% endblock %}}
