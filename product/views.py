@@ -20,6 +20,10 @@ def productlist(request):
 
 def productdetail(request,id):
     product = get_object_or_404(Product,pk=id)
+    context = {
+        'product':product,
+    }
+    return render(request,'product/productdetail.html',context)
 
 def sign_up(request):
     if request.method == 'POST':

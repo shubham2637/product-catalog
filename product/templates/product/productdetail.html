@@ -20,34 +20,15 @@
         </div>
       </header>
 
-      <h1 style="text-align: center;">Product Listing</h1>
-      <table class="table table-hover table-fixed" style="background-color: grey;">
-      
-          <!--Table head-->
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Quantity</th>
-            </tr>
-          </thead>
-          <!--Table head-->
-          {% for product in products %}
-          <!--Table body-->
-          <tbody>
-            <tr>
-              <th scope="row"><a  href="/product/{{product.id}}">{{product.id}}</a></th>
-              <td>{{product.name}}</td>
-              <td>{{product.quantity}}</td>
-              
-            </tr>
-            
-          </tbody>
-          {% endfor %}
-          <!--Table body-->
-        
-        </table>
 
+      <div class="card text-white bg-dark mb-3" >
+        <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text" >Name : {{product.name}} </p>
+            <p class="card-text" >Quantity : {{product.quantity}} </p>
+        </div>
+      </div>
+<a href="{% url 'productlisting' %}">Back to Product Listing</a>
 
   <footer class="mastfoot mt-auto row">
     <div class="inner ">

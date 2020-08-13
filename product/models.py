@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 class Product(models.Model):
     name = models.CharField(max_length=256)
     quantity = models.IntegerField(default=1)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return f"{self.name} uploaded : {self.quantity}"
