@@ -20,36 +20,16 @@ K = int(input())
 
 X = set()
 Y = set()
+c=0
 for i in range(K):
     x,y = list(map(int,input().split()))
     X.add(x)
     Y.add(y)
-print(X)
-print(Y)
+#print(X)
+#print(Y)
 for i in range(N):
     for j in range(N):
         if i not in X and j not in Y:
-            print(" {},{} ".format(i,j),end='')
-        else:
-            print("  .  ",end='')
-    print()
+            c+=1
+print(c)
 
-"""
-output tested
-{1, 6}
-{1, 3, 5}
- 0,0   .   0,2   .   0,4   .   0,6  0,7 
-  .    .    .    .    .    .    .    .  
- 2,0   .   2,2   .   2,4   .   2,6  2,7 
- 3,0   .   3,2   .   3,4   .   3,6  3,7 
- 4,0   .   4,2   .   4,4   .   4,6  4,7 
- 5,0   .   5,2   .   5,4   .   5,6  5,7 
-  .    .    .    .    .    .    .    .  
- 7,0   .   7,2   .   7,4   .   7,6  7,7
-
-For this input 8
-3
-1 1
-1 5
-6 3
-"""
